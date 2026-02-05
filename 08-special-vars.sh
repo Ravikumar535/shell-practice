@@ -7,3 +7,7 @@ echo " current working directary: $PWD"
 echo "who is running this: $USER"
 echo "home directary of user: $HOME"
 echo "pid of this script: $$"
+
+sleep 50 &
+echo "pid of the last command in background is: $!"
+
