@@ -7,3 +7,6 @@ NAME DevOps
 
 SUM=$(($NUMBER1+$NUMBER2+$NAME))
 echo "SUM is:${SUM}"
+
+LEADERS=("modi" "putin" "trump")
+echo "all leaders: ${LEADERS}[@]"
