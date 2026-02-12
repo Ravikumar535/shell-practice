@@ -12,7 +12,7 @@ VALIDATE(){ # functions recive inputs through args jest like shell scripts args
         echo "ERROR installing $2 is failure"
         exit 1
     else
-        echo "installing $2 os success"
+        echo "installing $2 is success"
     fi
 }
 
