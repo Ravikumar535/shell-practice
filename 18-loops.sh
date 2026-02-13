@@ -25,7 +25,7 @@ VALIDATE(){ # functions recive inputs through args jest like shell scripts args
         echo -e "installing $2... $Y success $N"
     fi
 }
-#  $@
+# $@
 for package in $@
 do 
     # check package already installed or not
