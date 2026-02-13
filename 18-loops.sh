@@ -25,3 +25,16 @@ VALIDATE(){ # functions recive inputs through args jest like shell scripts args
         echo -e "installing $2... $Y success $N"
     fi
 }
+#  $@
+for package in $@
+do 
+    # check package already installed or not
+    dnf list installed $package &>>$LOG_FILE
+    # if exit status is 0, already installed. -ne 0 need to install it
+    if [ $? -ne 0 ]; then
+        dnf install $package -y &>>$LOG_FILE
+        VALIDATE $? "$package"
+    else
+        echo -e "$package already installed ... $Y SKIPPING $N"
+
+done
